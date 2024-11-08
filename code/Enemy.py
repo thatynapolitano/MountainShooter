@@ -10,11 +10,11 @@ class Enemy(Entity):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
 
-    #Movimento vertical Enemy 3
+    #Movimento vertical 3 inimigo
         self.movement_vertical = name == 'Enemy3'
         if self.movement_vertical:
             self.inicio_y = position [1]
-            #Velocidade do enemy 3
+            #Velocidade do 3 inimigo
             self.y_velocidade_up = 1
             self.y_velocidade_down = 2
             self.direction = 1
@@ -23,7 +23,7 @@ class Enemy(Entity):
 
     def move(self):
         self.rect.centerx -= ENTITY_SPEED[self.name]
-        #Movimento vertical enemy 3
+        #Movimento vertical 3 inimigo
         if self.movement_vertical:
             if self.direction == 1:
                 velocidade = self.y_velocidade_down
